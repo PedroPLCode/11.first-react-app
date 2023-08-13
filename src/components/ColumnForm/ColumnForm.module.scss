@@ -8,20 +8,34 @@
     justify-content: center;
     gap: 8px;
 
+    input, button {
+        height: 42px;
+    }
+    
     input {
         border: 2px solid $color-success;
         border-radius: 5px;
-        height: 42px;
+        margin: 0px 16px 0px 0px;
     }
 
     button {
-        height: 42px;
+        margin: 0px 8px;
+        padding: 12px;
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1240px) {
     .columnForm {
         flex-direction: column;
         gap: 12px;
+
+        button, input {
+            margin: 0px;
+            width: 220px;
+        }
+
+        button {
+            margin-top: 22px;
+        }
     }
 }
