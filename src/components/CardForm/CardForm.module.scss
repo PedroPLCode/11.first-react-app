@@ -1,0 +1,45 @@
+@import '../../styles/settings.scss';
+
+.cardForm {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    input, button {
+        height: 42px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    button {
+        width: 96px;
+    }
+    
+    input {
+        border: 2px solid $color-success;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .cardForm {
+        flex-direction: column;
+        gap: 12px;
+
+        input, button {
+            margin: 0px;
+        }
+
+        input {
+            width: 180px;
+        }
+        
+        button {
+            width: 200px;
+        }
+
+    }
+}
