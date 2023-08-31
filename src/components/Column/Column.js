@@ -1,17 +1,26 @@
 import styles from './Column.module.scss'
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+//import { useEffect } from 'react';
 
 const Column = props => {
 
-  const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
+  const dispatch = useDispatch();
+
+  const searchString = useSelector(state => state.searchString);
+  const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id && card.title.toLowerCase().includes(searchString.toLowerCase())));
+
+  const handleClick = (columnId) => {
+    //dispatch({ type: 'REMOVE_COLUMN', payload: { columnId } });
+    console.log('klik remove column', columnId)
+  }
 
   return (
     <article className={styles.column}>
       <div className={styles.title}>
         <h2><span className={styles.icon + ' fa fa-' + props.icon}></span>{props.title}</h2>
-        <button>X</button>
+        <button onClick={handleClick(props.id)}>X</button>
       </div>
       <ul className={styles.cards}>
         {cards.map(card => <Card key={card.id} id={card.id} card={card} columnId={props.id} cards={props.cards} title={card.title} />)}

@@ -7,20 +7,6 @@ const List = () => {
 
   const columns = useSelector(state => state.columns);
 
-/*  const removeColumn = columnId => {
-    setColumns(columns.filter(column => column.id !== columnId));
-  };
-
-  const removeCard = (columnId, cardId) => {
-    const columnsUpdated = columns.map(column => {
-      if(column.id === columnId)
-        return { ...column, cards: column.cards.filter(card => card.id !== cardId)}
-      else
-        return column
-        })
-    setColumns(columnsUpdated);
-  };
-*/
     return (
       <div className={styles.list}>
         <header className={styles.header}>
