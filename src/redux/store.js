@@ -1,6 +1,12 @@
 import { createStore } from 'redux';
 import initialState from './initialState';
 import shortid from 'shortid';
+import strContains from '../utils/strContains';
+
+//selectors
+export const getFilteredCards = ({ cards, searchString }, columnId) => cards
+  .filter(card => card.columnId === columnId &&
+          strContains(card.title, searchString));
 
 const reducer = (state, action) => {
   switch (action.type) {

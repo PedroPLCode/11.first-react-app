@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 const Card = props => {
 
   const dispatch = useDispatch();
-
+  
   const handleClick = (cardId) => {
     //dispatch({ type: 'REMOVE_CARD', payload: { cardId } });
     console.log('klik remove card', cardId)
