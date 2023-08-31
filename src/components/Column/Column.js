@@ -14,9 +14,9 @@ const Column = props => {
         <button>X</button>
       </div>
       <ul className={styles.cards}>
-        {cards.map(card => <Card key={card.id} id={card.id} card={card} columnId={props.id} cards={props.cards} title={card.title} removeCard={props.removeCard}/>)}
+        {cards.map(card => <Card key={card.id} id={card.id} card={card} columnId={props.id} cards={props.cards} title={card.title} />)}
       </ul>
-      <CardForm columnId={props.id} addCard={props.addCard} />
+      <CardForm columnId={props.id} />
     </article>
   );
 };
