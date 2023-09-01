@@ -1,19 +1,21 @@
 import styles from './Column.module.scss'
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+//import { useDispatch } from 'react-redux';
 import { getFilteredCards } from '../../redux/store';
+//import { removeColumn } from '../../redux/store';
 //import { useEffect } from 'react';
 
 const Column = props => {
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   //const searchString = useSelector(state => state.searchString);
   const cards = useSelector(state => getFilteredCards(state, props.id));
 
   const handleClick = (columnId) => {
     //dispatch({ type: 'REMOVE_COLUMN', payload: { columnId } });
-    console.log('klik remove column', columnId)
+    //dispatch(removeColumn(columnId))
   }
 
   return (
