@@ -5,6 +5,7 @@ import ColumnForm from '../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { getColumnsByList, getListById } from '../../redux/store';
+import { Navigate } from 'react-router-dom';
 
 const List = () => {
 
@@ -13,6 +14,7 @@ const List = () => {
   const columns = useSelector(columns => getColumnsByList(columns, listId));
   const listData = useSelector(lists => getListById(lists, listId));
 
+  if(!listData) return <Navigate to="/" />
     return (
       <div className={styles.list}>
         <header className={styles.header}>
