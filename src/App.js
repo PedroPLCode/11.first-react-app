@@ -3,6 +3,7 @@ import Container from './components/Container/Container'
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Favorite from './components/Favorite/Favorite';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Container>
     </main>

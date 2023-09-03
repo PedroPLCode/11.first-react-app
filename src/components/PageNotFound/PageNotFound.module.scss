@@ -1,0 +1,10 @@
+@import '../../styles/settings.scss';
+
+.pagenotfound {
+  padding: $base-size;
+  color: $color-warning;
+}
+
+.title + .subtitle {
+  margin-top: (- $base-size * 3);
+}
