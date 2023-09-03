@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     gap: ($base-size * 2);
+    list-style-type: none;
 
     a {
       font-size: ($base-size * 1.4);
@@ -31,11 +32,10 @@
       text-decoration: none;
       font-weight: normal;
       font-style: italic;
-      transition: $transition;
     }
-
-    a:hover {
-      transform: scale(1.2);
-    }
+  }
+  
+  .linkActive {
+    color: $color-warning;
   }
 }
