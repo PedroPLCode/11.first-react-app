@@ -19,6 +19,7 @@ export const removeColumn = payload => ({ type: 'REMOVE_COLUMN', payload});
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
 export const removeCard = payload => ({ type: 'REMOVE_CARD', payload });
 export const addList = payload => ({type: 'ADD_LIST', payload });
+export const removeList = payload => ({type: 'REMOVE_LIST', payload });
 export const updateSearchString = payload => ({ type: 'UPDATE_SEARCH_STRING', payload });
 
 const reducer = (state, action) => {
@@ -33,6 +34,8 @@ const reducer = (state, action) => {
       return { ...state, cards: [...state.cards.filter(card => action.payload.cardId !== card.id)]};
     case 'ADD_LIST':
       return { ...state, lists: [...state.lists, { ...action.payload, id: shortid() }]};
+    case 'REMOVE_LIST':
+      return { ...state, lists: [...state.lists.filter(list => action.payload.listId !== list.id)]};
     case 'UPDATE_SEARCH_STRING':
       return { ...state, searchString: action.payload };
     default:
