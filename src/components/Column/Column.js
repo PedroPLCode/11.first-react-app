@@ -19,7 +19,7 @@ const Column = props => {
     <article className={styles.column}>
       <div className={styles.title}>
         <h2><span className={styles.icon + ' fa fa-' + props.icon}></span>{props.title}</h2>
-        <button onClick={handleRemoveColumn}><i className="fa fa-trash"></i></button>
+        <i onClick={handleRemoveColumn} className="fa fa-trash"></i>
       </div>
       <ul className={styles.cards}>
         {filteredCards.map(card => <Card key={card.id} id={card.id} card={card} columnId={props.id} isFavorite={card.isFavorite} cards={props.cards} title={card.title} />)}

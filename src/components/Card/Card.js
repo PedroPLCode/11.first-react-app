@@ -17,9 +17,9 @@ const Card = props => {
 
   return (
     <li className={styles.card}>{props.title}
-      <div>
-        <button onClick={handleAddFavorite}><i className={clsx("fa fa-star-o", props.isFavorite && styles.isFavorite)}></i></button>
-        <button onClick={handleRemoveCard}><i className="fa fa-trash"></i></button>
+      <div className={styles.iconwraper}>
+        <i onClick={handleAddFavorite} className={clsx("fa fa-star-o", props.isFavorite && styles.isFavorite)}></i>
+        <i onClick={handleRemoveCard} className="fa fa-trash"></i>
       </div>
     </li>
   );

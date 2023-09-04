@@ -21,7 +21,7 @@ const Lists = () => {
       <h2 className={styles.heading}>Browse lists</h2>
         {allLists.map(list => (
           <Link key={list.id} to={`list/${list.id}`} className={styles.listLink}>
-            <h3>{list.title}<button onClick={event => handleRemoveList(event, list.id)}><i className="fa fa-trash"></i></button></h3>
+            <h3>{list.title}<i onClick={event => handleRemoveList(event, list.id)} className="fa fa-trash"></i></h3>
             <p>{list.description}</p>
           </Link>
         ))}
