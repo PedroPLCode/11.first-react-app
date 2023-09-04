@@ -10,7 +10,6 @@ import { Navigate } from 'react-router-dom';
 const List = () => {
 
   const { listId } = useParams();
-  //const allColumns = useSelector(getAllColumns);
   const columns = useSelector(columns => getColumnsByList(columns, listId));
   const listData = useSelector(lists => getListById(lists, listId));
 

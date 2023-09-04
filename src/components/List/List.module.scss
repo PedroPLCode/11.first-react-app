@@ -12,6 +12,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  button {
+    i {
+      color: red;
+    }
+  }
 }
 
 .title {

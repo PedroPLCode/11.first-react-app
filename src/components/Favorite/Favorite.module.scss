@@ -1,9 +1,68 @@
+@use "sass:math";
 @import '../../styles/settings.scss';
+
+.favwrappper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .favorite {
   padding: $base-size;
+  flex-shrink: 0;
+  width: calc(33% - 12px);
+  background: $color-light;
+  margin: 0 $base-size $base-size 0;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 math.div($base-size, 4) 0 rgba(0,0,0,0.3);
+  color: $color-dark;
+
+  span {
+    font-size: $base-size * 1.5;
+    color: $color-warning;
+    font-weight: bold;
+  }
+
+  &:last-child {
+    margin: 0 0 $base-size 0;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h2 {
+    text-align: center;
+    font-size: ($base-size * 1.5);
+    margin: 0 0 ($base-size * 1.5) 0;
+  }
+}
+
+.icon::before {
+  padding-right: $base-size;
+  color: $color-warning;
+  font-size: ($base-size * 2);
+  vertical-align: middle;
+  position: relative;
+  top: - math.div($base-size, 3);
+}
+
+.cards {
+  padding: math.div($base-size, 2) 0;
 }
 
 .title + .subtitle {
   margin-top: (- $base-size * 3);
+}
+
+@media (max-width: 767px) {
+  .column {
+    width: 100%;
+    margin: 0 0 $base-size 0;
+  }
 }
