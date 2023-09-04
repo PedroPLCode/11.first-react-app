@@ -1,10 +1,8 @@
 import styles from './Lists.module.scss';
 import ListForm from '../ListForm/ListForm';
 import { Link } from 'react-router-dom';
-import { getAllLists } from "../../redux/store";
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { removeList } from '../../redux/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeList , getAllLists } from '../../redux/listsReducer';
 
 const Lists = () => {
 
