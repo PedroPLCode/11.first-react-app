@@ -7,7 +7,6 @@ import { addColumn } from '../../redux/columnsReducer';
 const ColumnForm = props => {
 
   const dispatch = useDispatch();
-
   const [title, setTitle] = useState('');
   const [icon, setIcon] = useState('');
   const handleSubmit = event => {

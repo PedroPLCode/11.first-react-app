@@ -8,7 +8,6 @@ import { addCard } from '../../redux/cardsReducer';
 const CardForm = props => {
 
   const dispatch = useDispatch();
-
   const [title, setTitle] = useState('');
   const handleSubmit = event => {
     event.preventDefault();

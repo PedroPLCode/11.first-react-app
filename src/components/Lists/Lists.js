@@ -8,7 +8,6 @@ const Lists = () => {
 
   const dispatch = useDispatch();
   const allLists = useSelector(getAllLists);
-
   const handleRemoveList = (event, listId) => {
     event.preventDefault();
     dispatch(removeList(listId));

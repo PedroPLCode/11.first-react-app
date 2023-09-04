@@ -60,6 +60,10 @@
   margin-top: (- $base-size * 3);
 }
 
+.noFavCards {
+  color: $color-warning;
+}
+
 @media (max-width: 767px) {
   .column {
     width: 100%;
