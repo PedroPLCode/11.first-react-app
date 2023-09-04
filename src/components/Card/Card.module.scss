@@ -26,5 +26,13 @@
       color: $color-warning;
       transform: scale(1.5);
     }
+
+    &:hover {
+      color: $color-warning;
+    }
+  }
+
+  i:hover {
+    color: $color-warning;
   }
 }
