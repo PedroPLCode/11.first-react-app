@@ -8,6 +8,7 @@ import { updateSearchString, getSearchString } from '../../redux/searchStringRed
 const SearchForm = () => {
 
   const dispatch = useDispatch();
+  //dispatch(updateSearchString(''));
   const searchString = useSelector(getSearchString);
   const [searchValue, setSearchValue] = useState(searchString);
   const handleSearch = (event) => {
