@@ -38,7 +38,6 @@ const initialState = {
       icon: 'music',
     }
   ],
-  
   cards: [
     { id: 1, isFavorite: false, columnId: 1, title: 'This is Going to Hurt' },
     { id: 2, isFavorite: false, columnId: 1, title: 'Interpreter of Maladies' },
@@ -48,7 +47,6 @@ const initialState = {
     { id: 6, isFavorite: false, columnId: 3, title: 'Skyrim' },
     { id: 7, isFavorite: true, columnId: 3, title: 'Test Favorite Card' }
   ],
-  
   searchString: '',
 };
   
